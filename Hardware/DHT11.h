@@ -19,7 +19,7 @@
 
 //函数声明
 uint8_t DHT11_Init(void);
-uint8_t DHT11_ReadData(uint8_t *humi, uint8_t *temp); // 修正参数顺序，先湿度后温度
+uint8_t DHT11_ReadData(uint8_t *humi, uint8_t *temp, uint8_t mode); // 添加mode参数用于调试控制
 uint8_t DHT11_ReadByte(void);
 uint8_t DHT11_ReadBit(void);
 void DHT11_Mode(uint8_t mode);

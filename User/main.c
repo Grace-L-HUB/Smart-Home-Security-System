@@ -177,22 +177,6 @@ void System_Update(void)
     Encoder_Update();
     int16_t encoder_count = Encoder_GetCount();
     
-
-    
-    // 编码器自动模式切换功能
-    // 使用简单的阈值检测，只要有旋转就切换模式
-    if (encoder_count != 0) {
-        if (encoder_count > 0) { // 顺时针旋转
-            // 切换到下一个模式
-            SystemMode_t next_mode = (SystemMode_t)((system_status.mode + 1) % 3);
-            System_SwitchMode(next_mode);
-        } else if (encoder_count < 0) { // 逆时针旋转
-            // 切换到上一个模式
-            SystemMode_t prev_mode = (SystemMode_t)((system_status.mode + 2) % 3);
-            System_SwitchMode(prev_mode);
-        }
-    }
-    
     /*处理串口命令*/
     if (serial_command_received)
     {
@@ -222,8 +206,8 @@ void System_Update(void)
         
         while (retry < 5) // 最多重试5次
         {
-            // 直接使用读取到的数据，无论校验是否成功
-            result = DHT11_ReadData(&humi_read, &temp_read);
+            // 传递当前系统模式给DHT11_ReadData，以便只在调试模式下打印调试信息
+            result = DHT11_ReadData(&humi_read, &temp_read, system_status.mode);
             
             // 如果读取成功，立即更新并退出
             if (result == 0)

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Dec 22 00:21:54 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Dec 29 14:12:33 2025
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -536,7 +536,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT11_ReadData
 </UL>
 
-<P><STRONG><a name="[67]"></a>DHT11_ReadData</STRONG> (Thumb, 150 bytes, Stack size 40 bytes, dht11.o(i.DHT11_ReadData))
+<P><STRONG><a name="[67]"></a>DHT11_ReadData</STRONG> (Thumb, 158 bytes, Stack size 40 bytes, dht11.o(i.DHT11_ReadData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DHT11_ReadData &rArr; DHT11_Rst &rArr; DHT11_Mode &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DHT11_Rst
@@ -1186,7 +1186,7 @@ Global Symbols
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_ParseCommand
 </UL>
 
-<P><STRONG><a name="[bc]"></a>System_Update</STRONG> (Thumb, 352 bytes, Stack size 24 bytes, main.o(i.System_Update))
+<P><STRONG><a name="[bc]"></a>System_Update</STRONG> (Thumb, 294 bytes, Stack size 24 bytes, main.o(i.System_Update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = System_Update &rArr; System_HandleSerialCommand &rArr; System_ParseCommand &rArr; __0sscanf &rArr; __vfscanf_char &rArr; __vfscanf &rArr; _scanf_int
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_SwitchMode

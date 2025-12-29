@@ -71,10 +71,10 @@ uint8_t DHT11_ReadByte(void)
 	return dat; 
 } 
 
-uint8_t DHT11_ReadData(uint8_t *humi, uint8_t *temp)    // 修正参数顺序，先湿度后温度
+uint8_t DHT11_ReadData(uint8_t *humi, uint8_t *temp, uint8_t mode)    // 添加mode参数用于调试控制
 {
   uint8_t buff[5]; 
-  uint8_t i; 
+  uint8_t i;
   DHT11_Rst(); //发送起始信号 
   if(DHT11_Check()==0) //等待响应 
   {
@@ -91,16 +91,19 @@ uint8_t DHT11_ReadData(uint8_t *humi, uint8_t *temp)    // 修正参数顺序，
       *temp=buff[2];		//温度数据 
     }
     
-    // 打印原始数据以便调试
-    printf("[DEBUG] DHT11 Raw Data: %02X %02X %02X %02X %02X\n", 
-           buff[0], buff[1], buff[2], buff[3], buff[4]);
-    printf("[DEBUG] DHT11 Checksum: Calculated=%02X, Received=%02X\n", 
-           checksum, buff[4]);
-    printf("[DEBUG] DHT11 Extracted: Temp=%d, Humi=%d\n", 
-           *temp, *humi);
+    // 仅在调试模式时打印原始数据以便调试
+    if (mode == 2) // MODE_DEBUG 对应的值为2
+    {
+      printf("[DEBUG] DHT11 Raw Data: %02X %02X %02X %02X %02X\n", 
+             buff[0], buff[1], buff[2], buff[3], buff[4]);
+      printf("[DEBUG] DHT11 Checksum: Calculated=%02X, Received=%02X\n", 
+             checksum, buff[4]);
+      printf("[DEBUG] DHT11 Extracted: Temp=%d, Humi=%d\n", 
+             *temp, *humi);
+    }
   } 
   else return 1; 
-  return 0;	    
+  return 0;	 
 } 
   
 /*========================================================== 
@@ -144,3 +147,4 @@ void DHT11_Mode(uint8_t mode)
 	GPIO_Init(DHT11_GPIO_PORT, &GPIO_InitStructure); 
 }
 
+

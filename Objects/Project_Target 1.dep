@@ -936,7 +936,7 @@ I (D:\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\ARM\ARMCC\include\stdarg.h)(0x5E8E3CC2)
 F (.\Hardware\Serial.h)(0x62D3EBED)()
 F (.\Hardware\Buzzer.h)(0x6933E170)()
-F (.\Hardware\DHT11.h)(0x693D1E6B)()
+F (.\Hardware\DHT11.h)(0x69521B9F)()
 F (.\Hardware\Encoder.h)(0x6933E214)()
 F (.\Hardware\IR.h)(0x6933E15D)()
 F (.\Hardware\Buzzer.c)(0x6933F0F9)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-ID:\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\buzzer.o --omf_browse .\objects\buzzer.crf --depend .\objects\buzzer.d)
@@ -969,8 +969,8 @@ I (.\Library\stm32f10x_usart.h)(0x4D783BB4)
 I (.\Library\stm32f10x_wwdg.h)(0x4D783BB4)
 I (.\Library\misc.h)(0x4D783BB4)
 I (.\System\Delay.h)(0x6130920D)
-F (.\Hardware\DHT11.c)(0x693D2151)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-ID:\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\dht11.o --omf_browse .\objects\dht11.crf --depend .\objects\dht11.d)
-I (Hardware\dht11.h)(0x693D1E6B)
+F (.\Hardware\DHT11.c)(0x69521BAF)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-ID:\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\dht11.o --omf_browse .\objects\dht11.crf --depend .\objects\dht11.d)
+I (Hardware\dht11.h)(0x69521B9F)
 I (.\Start\stm32f10x.h)(0x4D783CB4)
 I (.\Start\core_cm3.h)(0x4D523B58)
 I (D:\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -1095,7 +1095,7 @@ I (Hardware\Serial.h)(0x62D3EBED)
 I (D:\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
 F (.\Hardware\W25Q64.h)(0x693D5EA8)()
-F (.\User\main.c)(0x69481E60)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-ID:\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\User\main.c)(0x69521BBC)(--c99 -c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-ID:\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\Start\stm32f10x.h)(0x4D783CB4)
 I (.\Start\core_cm3.h)(0x4D523B58)
 I (D:\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -1130,7 +1130,7 @@ I (.\System\Delay.h)(0x6130920D)
 I (.\Hardware\OLED.h)(0x616ED05A)
 I (.\Hardware\Serial.h)(0x62D3EBED)
 I (D:\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-I (.\Hardware\DHT11.h)(0x693D1E6B)
+I (.\Hardware\DHT11.h)(0x69521B9F)
 I (.\Hardware\IR.h)(0x6933E15D)
 I (.\Hardware\Buzzer.h)(0x6933E170)
 I (.\Hardware\Encoder.h)(0x6933E214)
